@@ -1,0 +1,26 @@
+#kong{ height: 80px; width: 100%; }
+#header{ width: 100%; height: 80px; background: #000; position: fixed; top: 0;z-index: 999; }
+#header .nav{ width: 90%; margin: 0 auto; }
+#header .nav ul li{ float: left; margin-left: 30px; line-height: 80px;  }
+#header .nav ul li a{font-size: 15px; color: #fff; font-family: "微软雅黑";transition: 1s; }
+#header .nav ul li a:hover{ color: #f0f; transition: 1s; }
+#gTop{ position: fixed; bottom: 100px; right: 50px;}
+#footer{ width: 100%; background: #000; height:400px; }
+#footer .foot{ width: 80%; margin: 0 auto; height:400px; }
+#footer p{ text-align: center; }
+#footer p img{ width: 145px; height: 145px; }
+#footer dl{ width:20%; float: left; }
+#footer dl dt{ font-size: 20px; color: #ccc; font-family: "微软雅黑"; }
+#footer dl dd{ font-size: 15px; color: #888; font-family: "微软雅黑"; margin-top: 20px; line-height: 30px;}
+#footer dl dd a{ color: #888;  }
+#footer dl dd a:hover{ color: #B48F34; text-decoration: none; }
+#footer ul{ float: left; margin-top: 40px; }
+#footer ul li{ font-size:14px; color: #666; font-family: "微软雅黑"; line-height: 40px; }
+#footer ul li span{ display: inline-block; width: 100%; height: 30px; line-height: 30px; background: #60AE4D; text-align: center; border-radius: 5px; margin-top: 30px;}
+#footer ul li a{ color: #ccc; }
+
+#foot2{ width: 100%; height: 200px; text-align: center; background: #000; }
+#foot2 ul li{ line-height: 50px; font-size: 15px;}
+#foot2 ul li a{ color: #ccc; }
+#foot2 ul li a:hover{ color: #B48F34; text-decoration: none; }
+#foot2 ul span{ display: inline-block; width: 50px; height: 30%; background: #888; color: #ccc; }

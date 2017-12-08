@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/hf.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+		window.onload=function(){
+			new WOW().init();//初始化
+		}
+	</script>
+
+	<style>
+#banner{ width: 100%; height: 500px; position: relative;  }
+#banner img{ width: 100%; height: 500px;position: absolute; transition: 1s; opacity: 0;}
+#banner #lt{ position: absolute; top: 260px; left: 0; font-size: 30px; }
+#banner #rt{ position: absolute; top: 260px; right: 0;font-size: 30px; }
+#num{position: absolute; bottom: 0; left: 45%; }
+#num p{ display: inline-block; }
+#num p a{ color: #888; font-size: 30px; text-decoration: none; }
+
+#shop{ width: 100%; margin-top: 100px; height: 2000px;}
+#shop .list{ width: 80%; margin: 0 auto; }
+#shop .list ul{ width: 49%; border: 1px solid #ddd; display: inline-block;}
+#shop .list ul:hover{ color: #357; cursor: pointer;  transition: 1s;}
+#shop .list ul:hover li:nth-child(3){ background: #fff; color:#000; transition: 1s;}
+#shop .list ul li{ line-height: 30px; text-align: center; }
+#shop .list ul li:nth-child(2){ font-size: 30px; }
+#shop .list ul li:nth-child(3){ background: #000; font-size: 15px; transition: 1s;}
+#shop .list ul li img{ width: 100%; }
+#shop .list span{display: inline-block; width: 100%; text-align: center; }
+
+
+
+	</style>
+</head>
+<body>
+	<div id="kong"></div>
+<div id="header">
+		<div class="nav">
+			<ul class="fl">
+				<li style="margin-left: 0;"><a href="index.html" style="text-decoration: none;">T A P O L E</a></li>
+				<li><a href="jinshi.html">近视眼镜</a></li>
+				<li><a href="mojing.html">近视太阳镜</a></li>
+				<li><a href="order.html">预约到店</a></li>
+				<li><a href="free.html">免费在家试戴</a></li>
+			</ul>
+			<ul class="fr">
+				<li><a href="load.html" style="color:#ccc">登陆/注册</a></li>
+				<li><a href="load.html" style="color:#ccc">我的账户</a></li>
+				<li><a href="shop.html" style="color:#ccc">Message 0</a></li>
+			</ul>
+		</div>
+</div>
+	<div id="gTop"><a href="javascript:;" style="color: #fff;">→丄←</a></div>
+<script>
+	$(function(){
+				$("#gTop").click(function(){
+					var y=$(document).scrollTop();
+					var timer=null;
+					clearInterval(timer);
+					timer=setInterval(function(){
+					y=y-y*0.09;
+					if(y<1){
+						y=0;
+						clearInterval(timer);
+					}
+
+					$(document).scrollTop(y);
+					},40);	
+			});
+	});
+</script>
+
+<div id="banner">
+	<img src="images/jinshiban.jpg" style="opacity: 1;"><img src="images/jinshiban2.jpg"><img src="images/jinshiban3.jpg"><img src="images/jinshiban4.jpg">
+	<div id="lt"><a href="javascript:;" style="text-decoration: none;"> <<< </a></div>
+	<div id="rt"><a href="javascript:;" style="text-decoration: none;"> >>> </a></div>
+	<div id="num">
+		<p><a href="javascript:;">。</a></p>
+		<p><a href="javascript:;">。</a></p>
+		<p><a href="javascript:;">。</a></p>
+		<p><a href="javascript:;">。</a></p>
+	</div>
+</div>
+<script>
+		var banner=document.getElementById('banner');
+		var img=banner.getElementsByTagName('img');
+		var lt=document.getElementById('lt');
+		var rt=document.getElementById('rt');
+		var num=document.getElementById('num');
+		var p=num.getElementsByTagName('p');
+		var dong=0;
+		var timer=null;
+
+		for(var i=0; i<p.length;i++){
+			p[i].onclick=(function(a){			
+				return function(){
+					img[dong].style.opacity=0;
+					dong=a;
+					img[dong].style.opacity=1;					
+				}				
+			})(i);
+		}
+		
+
+
+		function fn(index){
+			img[dong].style.opacity=0;
+			dong=dong+index;
+			if(dong>(img.length-1)){
+				dong=0;
+			}
+				if(dong<0){
+				dong=3;
+			}
+			img[dong].style.opacity=1;
+		}
+
+		lt.onclick=function(){
+			fn(-1);
+
+		}
+		rt.onclick=function(){
+			fn(1);
+		}
+		timer=setInterval(function(){
+			fn(1)
+		},3000)
+		banner.onmouseover=function(){
+			clearInterval(timer);
+		}
+		banner.onmouseout=function(){
+			timer=setInterval(function(){
+			fn(1)
+		},3000)
+		}
+	</script>
+
+<div id="shop">
+	<div class="list">
+		<ul class="wow rollIn" data-wow-delay="0.8s">
+			<li><img src="images/list.png"></li>
+			<li>A1</li>
+			<li>RMB 699起</li>
+		</ul>
+		<ul class="wow lightSpeedIn" data-wow-delay="0.8s">
+			<li><img src="images/list4.png"></li>
+			<li>B1</li>
+			<li>RMB 599起</li>
+		</ul>
+		<ul class="wow bounceInLeft" data-wow-delay="0.8s">
+			<li><img src="images/list2.png"></li>
+			<li>C1</li>
+			<li>RMB 499起</li>
+		</ul>
+		<ul class="wow bounceInRight" data-wow-delay="0.8s">
+			<li><img src="images/list3.png"></li>
+			<li>D1</li>
+			<li>RMB 399起</li>
+		</ul>
+		<ul class="wow swing" data-wow-delay="0.8s">
+			<li><img src="images/list5.png"></li>
+			<li>E1</li>
+			<li>RMB 299起</li>
+		</ul>
+		<ul class="wow swing" data-wow-delay="0.8s">
+			<li><img src="images/list6.png"></li>
+			<li>F1</li>
+			<li>RMB 199起</li>
+		</ul>
+		<ul class="wow swing" data-wow-delay="0.8s">
+			<li><img src="images/list7.png"></li>
+			<li>G1</li>
+			<li>RMB 99起</li>
+		</ul>
+		<ul class="wow swing" data-wow-delay="0.8s">
+			<li><img src="images/list8.png"></li>
+			<li>H1</li>
+			<li>RMB 90起</li>
+		</ul>
+		<ul class="wow swing" data-wow-delay="0.8s">
+			<li><img src="images/list9.png"></li>
+			<li>I1</li>
+			<li>RMB 9起</li>
+		</ul>
+		<ul class="wow swing" data-wow-delay="0.8s">
+			<li><img src="images/list10.png"></li>
+			<li>J1</li>
+			<li>RMB 0起</li>
+		</ul>
+		<span class="wow shake" data-wow-iteration="20" data-wow-duration="0.15s"><img src="images/erweima.png" ></span>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	<div class="foot">
+	<p><img src="images/logo.jpg"></p>
+		<dl>
+			<dt>常见疑问</dt>
+			<dd style="margin-left: 10px;"><a href="javascript:;">配镜数据</a></dd>
+			<dd style="margin-left: 10px;"><a href="javascript:;">支付配送</a></dd>
+			<dd style="margin-left: 10px;"><a href="javascript:;">退货保障</a></dd>
+		</dl>
+		<dl>
+			<dt>顾问建议</dt>
+			<dd><a href="javascript:;">预约验光(深圳)</a></dd>
+			<dd><a href="javascript:;">下载【AR选眼镜】APP</a></dd>
+			<dd><a href="javascript:;">镜片选择</a></dd>
+			<dd><a href="javascript:;">镜架选购</a></dd>
+		</dl>
+		<dl>
+			<dt>关注我们</dt>
+			<dd><a href="javascript:;">天猫旗舰店</a></dd>
+			<dd><a href="javascript:;">官方微信</a></dd>
+			<dd><a href="javascript:;">给 CEO 写信</a></dd>
+		</dl>
+		<dl>
+			<dt>关于 Tapole</dt>
+			<dd><a href="javascript:;">Tapole 简介</a></dd>
+			<dd><a href="javascript:;">联系我们</a></dd>
+		</dl>
+		<ul>
+			<li>微信电话支持：每天 8:00-22:00</li>
+			<li>线下：体验中心到店请提前预约</li>
+			<li><a href="javascript:;">400-885-1024</a></li>
+			<li><a href="javascript:;"><span>与Tapole眼镜顾问聊天</span></a></li>
+		</ul>
+	</div>	
+</div>
+<div id="foot2">
+	<ul>
+		<li>© 2017 Tapole Co., Ltd. All rights reserved. 粤ICP备14032994号 | <a href="javascript:;">用户隐私条例 </a>| <a href="javascript:;">网站使用条例 </a>| <a href="javascript:;">销售服务条例 </a></li>
+		<li>深圳图谱人文科技有限公司</li>
+		<span>广告</span><li>Tapole®眼镜品牌官网包含本品牌广告</li>
+	</ul>
+	</div>
+
+</body>
+</html>

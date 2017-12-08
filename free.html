@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/hf.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+		window.onload=function(){
+			new WOW().init();//初始化
+		}
+	</script>
+	<style>
+body{ background: #eeeeee; }
+#home{ width: 100%; height: 3800px; margin-top: 50px; }
+#home .home{ width: 90%; margin: 0 auto;}
+#home .home h1{ font-style: italic; font-size: 50px; text-align: center; letter-spacing: 5px; line-height: 50px; color: #000;}
+#home .home h1 span{line-height: 100px;font-style: initial; height: 200px; }
+#home .home h2{font-size: 30px; text-align: center; letter-spacing: 5px; line-height: 50px; color: #000; margin-top: 30px; font-family: "微软雅黑"}
+#home .home p{ text-align: center;color: #888; font-family: "微软雅黑"; line-height: 50px; font-size: 20px;}
+#home img{ width: 100%; }
+#home .con{ width: 90%; margin: 0 auto; margin-top: 50px; }
+#home .con h3{ font-size: 30px; color: #000; font-family: "微软雅黑";text-align: center; }
+
+#two{ width: 90%; margin: 0 auto; text-align: center;}
+
+
+
+
+	</style>
+</head>
+<body>
+<div id="kong"></div>
+<div id="header">
+		<div class="nav">
+			<ul class="fl">
+				<li style="margin-left: 0;"><a href="index.html" style="text-decoration: none;">T A P O L E</a></li>
+				<li><a href="jinshi.html">近视眼镜</a></li>
+				<li><a href="mojing.html">近视太阳镜</a></li>
+				<li><a href="order.html">预约到店</a></li>
+				<li><a href="free.html">免费在家试戴</a></li>
+			</ul>
+			<ul class="fr">
+				<li><a href="load.html" style="color:#ccc">登陆/注册</a></li>
+				<li><a href="load.html" style="color:#ccc">我的账户</a></li>
+				<li><a href="shop.html" style="color:#ccc">Message 0</a></li>
+			</ul>
+		</div>
+</div>
+	<div id="gTop"><a href="javascript:;" style="color: #fff;">→丄←</a></div>
+<script>
+	$(function(){
+				$("#gTop").click(function(){
+					var y=$(document).scrollTop();
+					var timer=null;
+					clearInterval(timer);
+					timer=setInterval(function(){
+					y=y-y*0.09;
+					if(y<1){
+						y=0;
+						clearInterval(timer);
+					}
+
+					$(document).scrollTop(y);
+					},40);	
+			});
+	});
+</script>
+
+
+<div id="home">
+	<div class="home">
+		<h1 class="wow bounceInDown"data-wow-delay="0.5s">FREE HOME TRY-ON <br><span>免费在家试戴</span></h1>
+		<hr>
+		<h2 class="wow rollIn"data-wow-delay="0.5s">三副眼镜，三天试戴</h2>
+		<p class="wow lightSpeedIn"data-wow-delay="0.5s">在陌生的店面里，摘掉旧眼镜，不仅看不清楚，还得在成千上万的眼镜中左右挣扎，听店员的推销... <br>现在，Tapole的免费在家试戴，会使购买眼镜变得方便，而且有趣。</p>
+		<img src="images/f5.jpg">
+		<img src="images/f8.jpg"><img style="margin-top:-6px;" src="images/f6.jpg">
+		<img src="images/f4.jpg"><img src="images/f3.jpg">
+		<div class="con">
+			<h3 class="wow bounceInDown"data-wow-delay="0.5s">让热爱眼睛的Tapole顾问帮助你</h3>
+			<hr style="margin-top: 50px;">
+			<p class="wow swing" data-wow-iteration="5">遇到任何问题，需要服务与支持？<br>致电 400-885-1024，或在公众号"Tapole"，召唤万能的<br>Tapole 私人眼镜顾问！</p>
+		</div>	
+	</div>	
+</div>
+		<div id="two">
+			<img  class="wow shake" data-wow-iteration="30" data-wow-duration="0.15s"src="images/erweima.png">
+		</div>
+
+<div id="footer">
+	<div class="foot">
+	<p><img src="images/logo.jpg"></p>
+		<dl>
+			<dt>常见疑问</dt>
+			<dd style="margin-left: 10px;"><a href="javascript:;">配镜数据</a></dd>
+			<dd style="margin-left: 10px;"><a href="javascript:;">支付配送</a></dd>
+			<dd style="margin-left: 10px;"><a href="javascript:;">退货保障</a></dd>
+		</dl>
+		<dl>
+			<dt>顾问建议</dt>
+			<dd><a href="javascript:;">预约验光(深圳)</a></dd>
+			<dd><a href="javascript:;">下载【AR选眼镜】APP</a></dd>
+			<dd><a href="javascript:;">镜片选择</a></dd>
+			<dd><a href="javascript:;">镜架选购</a></dd>
+		</dl>
+		<dl>
+			<dt>关注我们</dt>
+			<dd><a href="javascript:;">天猫旗舰店</a></dd>
+			<dd><a href="javascript:;">官方微信</a></dd>
+			<dd><a href="javascript:;">给 CEO 写信</a></dd>
+		</dl>
+		<dl>
+			<dt>关于 Tapole</dt>
+			<dd><a href="javascript:;">Tapole 简介</a></dd>
+			<dd><a href="javascript:;">联系我们</a></dd>
+		</dl>
+		<ul>
+			<li>微信电话支持：每天 8:00-22:00</li>
+			<li>线下：体验中心到店请提前预约</li>
+			<li><a href="javascript:;">400-885-1024</a></li>
+			<li><a href="javascript:;"><span>与Tapole眼镜顾问聊天</span></a></li>
+		</ul>
+	</div>	
+</div>
+<div id="foot2">
+	<ul>
+		<li>© 2017 Tapole Co., Ltd. All rights reserved. 粤ICP备14032994号 | <a href="javascript:;">用户隐私条例 </a>| <a href="javascript:;">网站使用条例 </a>| <a href="javascript:;">销售服务条例 </a></li>
+		<li>深圳图谱人文科技有限公司</li>
+		<span>广告</span><li>Tapole®眼镜品牌官网包含本品牌广告</li>
+	</ul>
+	</div>
+</body>
+</html>
